@@ -14,7 +14,7 @@ export function Navbar() {
   const [productDropdown, setProductDropdown] = useState(false); // State for dropdown
   
   return (
-    <div className="shadow-md w-full fixed top-0 left-0  bg-[url('./img/bg.jpg')] h-screen bg-cover bg-center bg-no-repeat w-full">
+    <div className="shadow-md w-full fixed top-0 left-0  bg-[url('/img/bg.jpg')] h-screen bg-cover bg-center bg-no-repeat w-full">
       <div className="md:flex justify-between items-center  py-4 md:px-20 px-7">
         <div className="font-bold md:text-3xl text-2xl cursor-pointer flex items-center text-white ">
           <span className="bi bi-person text-3xl text-white mr-1 pt-2 "></span>
