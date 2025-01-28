@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { Button } from "../buttons/button";
-import { HeroSection } from "../hero-section/hero-section";
-import { Services } from "../services/services";
+import { Link } from "react-router-dom";
 
 export function Navbar() {
   const Links = [
     { name: "HOME", link: "/" },
-    { name: "SERVICES", link: "/" },
-    { name: "ABOUT US", link: "/" },
-    { name: "CONTACT US", link: "/" },
+    { name: "SERVICES", link: "/services" },
+    { name: "ABOUT US", link: "/about-us" },
+    { name: "CONTACT US", link: "/contact" },
   ];
 
   const [open, setOpen] = useState(false);
@@ -16,21 +15,29 @@ export function Navbar() {
 
   return (
     <div>
-      <div className="shadow-md   top-0 left-0  bg-[url('/img/bg.jpg')] h-screen bg-cover bg-center bg-no-repeat w-full">
+      <div className="shadow-md fixed top-0 h-20 w-full bg-black z-50 left-0">
         <div className="md:flex justify-between items-center  py-4 md:px-20 px-7">
-          <div className="font-bold md:text-3xl text-2xl cursor-pointer flex items-center text-white ">
-            <span className="bi bi-person text-3xl text-white mr-1 pt-2 "></span>
+          <div className="font-bold md:text-3xl text-2xl cursor-pointer flex items-center text-white">
+            <span className="bi bi-person text-3xl text-white mr-1 pt-2"></span>
             <h1 className="uppercase">urmila metals</h1>
+            {/* <img src="/img/metal-logo3.webp"  alt="" className="w-15"/> */}
           </div>
-          <div onClick={() => setOpen(!open)} className="text-3xl absolute  right-8 top-6 cursor-pointer md:hidden">
+          <div onClick={() => setOpen(!open)} className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden">
             <span className={open ? "bi bi-x-lg text-white" : "bi bi-list text-white"}></span>
           </div>
-          <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute z-auto md:static bg-cyan-900 md:bg-transparent text-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? "top-20 opacity-100" : "top-[-490px] md:opacity-100 opacity-0"}`}>
+          <ul
+            className={`md:flex md:items-center md:pb-0 pb-12 absolute z-auto md:static bg-cyan-900 md:bg-transparent text-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+              open ? "top-20 opacity-100" : "top-[-490px] md:opacity-100 opacity-0"
+            }`}
+          >
             {Links.map((link) => (
               <li key={link.name} className="md:ml-8 text-[12] md:my-0 my-7 font-bold">
-                <a href={link.link} className="relative text-white hover:cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-500 hover:after:w-full">
+                <Link
+                  to={link.link}
+                  className="relative text-white hover:cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-500 hover:after:w-full"
+                >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
 
@@ -40,23 +47,29 @@ export function Navbar() {
               onMouseEnter={() => setProductDropdown(true)} // Show dropdown
               onMouseLeave={() => setProductDropdown(false)} // Hide dropdown
             >
-              <a
-                href="/"
+              <Link
+                to="/products"
                 className="relative text-white hover:cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-500 hover:after:w-full"
               >
                 PRODUCTS
-              </a>
+              </Link>
               {/* Dropdown menu */}
               {productDropdown && (
-                <ul className="absolute left-0  bg-black text-white w-[50] py-2 mt-1 rounded-lg shadow-lg">
+                <ul className="absolute left-0 bg-black text-white w-[50] py-2 mt-1 rounded-lg shadow-lg">
                   <li>
-                    <a href="/" className="block px-4 py-2 hover:bg-gray-600">Windows</a>
+                    <Link to="/windows" className="block px-4 py-2 hover:bg-gray-600">
+                      Windows
+                    </Link>
                   </li>
                   <li>
-                    <a href="/" className="block px-4 py-2 hover:bg-gray-600">Doors</a>
+                    <Link to="/doors" className="block px-4 py-2 hover:bg-gray-600">
+                      Doors
+                    </Link>
                   </li>
                   <li>
-                    <a href="/" className="block px-4 py-2 hover:bg-gray-600">Accessories</a>
+                    <Link to="/accessories" className="block px-4 py-2 hover:bg-gray-600">
+                      Accessories
+                    </Link>
                   </li>
                 </ul>
               )}
@@ -65,14 +78,7 @@ export function Navbar() {
             <Button>Request a Quote</Button>
           </ul>
         </div>
-        <div>
-          <HeroSection />
-        </div>
       </div>
-      <div className="pt-screen"></div>
-     <div>
-     <Services />
-     </div>
     </div>
   );
 }

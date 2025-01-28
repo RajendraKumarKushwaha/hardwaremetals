@@ -1,64 +1,91 @@
 export function Contact() {
     return (
-        <div className="mt-5">
-            <h1 className="text-white text-center text-3xl font-bold mb-8">Contact Us</h1>
-            <div className="contact flex flex-col md:flex-row justify-between mx-4">
-                {/* Left Section */}
-                <div className="left flex justify-center items-center mb-6 md:mb-0">
-                    <img src="images/contact.png" alt="Contact Illustration" className="w-full md:w-3/5 object-contain" />
+        <div>
+            <div className=" md:px-20 px-7 bg-[url('/img/bg-white.jpg')]  h-70 absolute top-20 bg-cover bg-center bg-no-repeat w-full">
+                <div className="flex flex-col text-black font-bold justify-center items-center pt-15 ">
+                    <h1 className="md:text-6xl text-3xl mb-4 md:px-48  text-center">Contact Us.</h1>
+                    <p className="font-semibold text-black text-[17px] text-center">Our Journey in Windows and Doors, Your Path to Perfection.</p>
                 </div>
+                <div className="md:mt-40 mt-25 ">
+                    <div className="md:flex pt-8 justify-between   space-y-6">
 
-                {/* Right Section */}
-                <div className="right w-full md:w-1/2">
-                    <form className="bg-blue-300 border border-white rounded-lg p-6 text-white">
-                        {/* Name Input */}
-                        <div className="mb-4">
-                            <label className="block text-lg font-medium mb-2 flex items-center">
-                                <i className="bi bi-person mr-2"></i> Name
-                            </label>
-                            <input
-                                type="text"
-                                className="w-full px-4 py-2 text-gray-900 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
-                                placeholder="Enter your name"
-                            />
-                        </div>
+                        <div className="md:w-[48%] w-full">
+                            <h1 className="md:text-6xl text-3xl text-black font-bold mb-4 ">We’d Love to Hear From You</h1>
+                            <p className="text-gray-600 font-semibold text-[17px] mb-8">Whether you prefer a modern look or a classic style, windows and doors offer plenty of choices to match any design and need.</p>
+                            <div className="bg-white p-6 rounded-lg shadow-md space-y-4">
 
-                        {/* Email Input */}
-                        <div className="mb-4">
-                            <label className="block text-lg font-medium mb-2 flex items-center">
-                                <i className="bi bi-at mr-2"></i> Email
-                            </label>
-                            <input
-                                type="email"
-                                className="w-full px-4 py-2 text-gray-900 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
-                                placeholder="Enter your email"
-                            />
-                        </div>
+                                <div className="flex items-center space-x-2">
+                                    <i className="bi bi-envelope text-blue-500 text-xl"></i>
+                                    <span className="text-black font-medium">
+                                        Email: <a href="mailto:riteshchaurasiya1824@gmail.com" className="text-blue-600 hover:underline">riteshchaurasiya1824@gmail.com</a>
+                                    </span>
+                                </div>
 
-                        {/* Message Textarea */}
-                        <div className="mb-4">
-                            <label className="block text-lg font-medium mb-2 flex items-center">
-                                <i className="bi bi-envelope mr-2"></i> Message
-                            </label>
-                            <textarea
-                                className="w-full px-4 py-2 text-gray-900 rounded-md focus:outline-none focus:ring focus:ring-blue-500"
-                                rows="5"
-                                placeholder="Write your message"
-                            ></textarea>
-                        </div>
 
-                        {/* Submit Button */}
-                        <div className="text-center">
-                            <button
-                                type="submit"
-                                className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg transition duration-300 ease-in-out"
-                            >
-                                Send
-                            </button>
+                                <div className="flex items-center space-x-2">
+                                    <i className="bi bi-telephone text-green-500 text-xl"></i>
+                                    <span className="text-black font-medium">
+                                        Mobile: <a href="tel:+8251926703" className="text-green-600 hover:underline">+91-8251926703</a> &nbsp;
+                                        <a href="tel:+9109786749" className="text-green-600 hover:underline">+91-9109786749</a>
+                                    </span>
+                                </div>
+
+
+                                <div className="flex items-center space-x-2">
+                                    <i className="bi bi-geo-alt text-red-500 text-xl"></i>
+                                    <span className="text-black font-medium">
+                                        Address: Opposite Rajput Gun Service, Shivani Complex, Padmadhar Colony, Dhekha, Rewa (MP) 486001
+                                    </span>
+                                </div>
+                                </div>
+
+                            </div>
+                            <div className="md:w-[48%] w-full">
+                                <form className="bg-white p-6 border-1 rounded-lg shadow-lg w-full max-w-md">
+                                    <h2 className="text-2xl font-bold text-black mb-4">Get in Touch</h2>
+                                    <p className="mb-4 text-gray-600 font-semibold text-[17px]">Please feel free to get in touch with us using the contact form below. We’d love to hear for you.</p>
+
+                                    <label className="block  text-[17px] font-medium text-black mb-1">Name</label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        placeholder="Enter your name"
+                                        required
+                                        className="w-full text-gray-600 font-semibold text-[17px] p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+                                    />
+                                    <label className="block  text-[17px] font-medium text-black mb-1">Mobile</label>
+                                    <input
+                                        type="tel"
+                                        id="mobile"
+                                        name="mobile"
+                                        placeholder="Enter your mobile number"
+                                        required
+                                        className="w-full text-gray-600 font-semibold text-[17px] p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+                                    />
+
+                                    <label className="block text-[17px] font-medium text-black mb-1">Message</label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        placeholder="Enter your message here"
+                                        required
+                                        className="w-full text-gray-600 font-semibold text-[17px] p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 h-32 resize-none"
+                                    ></textarea>
+
+                                    <button
+                                        type="submit"
+                                        className="w-full bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 transition">
+                                        Send
+                                    </button>
+                                </form>
+                            </div>
+
                         </div>
-                    </form>
+                    </div>
+
+
                 </div>
             </div>
-        </div>
-    );
+            )
 }

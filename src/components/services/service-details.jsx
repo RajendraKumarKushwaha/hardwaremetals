@@ -4,28 +4,49 @@ import './services.css';
 const servicesData = [
     {
         image: "/img/doors.jpg",
+        link: "/door-fitting",
+        description: "Expert Installation",
+        heading: "Door Fitting Services",
+        details: "Seamless installation for all types of doors with precision and care."
+    },
+    {
+        image: "/img/doors1.jpg",
+        link: "/door-repair",
+        description: "Reliable Repairs",
+        heading: "Door Repair Services",
+        details: "Professional repair solutions to ensure your doors function flawlessly."
+    },
+    {
+        image: "/img/doors2.jpg",
+        link: "/door-sales",
+        description: "Wide Selection",
+        heading: "Door Sales Services",
+        details: "Explore a diverse range of doors tailored to meet your design and budget."
+    },
+    {
+        image: "/img/doors.jpg",
         link: "/doors",
         description: "Premium Services",
-        heading: "Custom Design Doors",
+        heading: "Custom Design Doors Services",
         details: "Experience personalized elegance with doors designed specifically for you."
     },
     {
         image: "/img/windows.jpg",
         link: "/windows",
         description: "Premium Services",
-        heading: "Innovative Windows",
+        heading: "Innovative Windows Services",
         details: "Transform your home with windows that lead the way in both design and functionality."
     },
     {
         image: "/img/handles.jpg",
         link: "/handles",
         description: "Premium Services",
-        heading: "Parts & Accessories",
+        heading: "Parts & Accessories Services",
         details: "Experienced professionals for flawless window and door setup."
     }
 ];
 
-export function Services() {
+export function ServiceDetails() {
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
 
@@ -38,11 +59,11 @@ export function Services() {
     };
 
     return (
-        <div className="pt-24 md:px-20 px-7">
-            <div className="flex flex-col text-black font-bold justify-center items-center ">
-                <h1 className="md:text-6xl text-3xl mb-4 md:px-48 text-center">Product and Services</h1>
-                <p className="font-semibold text-black text-xl">Home / Service</p>
-            </div>
+        <div className="bg-[url('/img/bg-white.jpg')]  h-70 absolute top-20 bg-cover bg-center bg-no-repeat md:px-20 px-7 w-full">
+                <div className="flex flex-col text-black font-bold justify-center items-center pt-15 ">
+                    <h1 className="md:text-6xl text-3xl mb-4 md:px-48  text-center">Our Best Services</h1>
+                    <p className="font-semibold text-black text-[17px] text-center">Delivering top-notch solutions with precision and care, tailored to meet all your needs.</p>
+                </div>
 
             {/* Spinner Loader */}
             {isLoading && (
@@ -50,7 +71,7 @@ export function Services() {
                     <div className="loader"></div>
                 </div>
             )}
-
+           <div className="md:mt-40 mt-25 ">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
                 {servicesData.map((service, index) => (
                     <div
@@ -73,6 +94,7 @@ export function Services() {
                         <p className="text-gray-600 font-semibold text-[17px] leading-7 mt-2">{service.details}</p>
                     </div>
                 ))}
+            </div>
             </div>
         </div>
     );
