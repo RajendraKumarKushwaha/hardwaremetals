@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Button } from "../buttons/button";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types"; 
 
-export function Navbar() {
+
+export function Navbar({ setIsOpen }) {
   const Links = [
     { name: "HOME", link: "/" },
     { name: "SERVICES", link: "/services" },
@@ -10,11 +11,14 @@ export function Navbar() {
     { name: "CONTACT US", link: "/contact" },
   ];
 
+  
+  console.log("setIsOpen:", setIsOpen);
   const [open, setOpen] = useState(false);
   const [productDropdown, setProductDropdown] = useState(false); // State for dropdown
 
   return (
     <div>
+      
       <div className="shadow-md fixed top-0 h-20 w-full bg-black z-50 left-0">
         <div className="md:flex justify-between items-center  py-4 md:px-20 px-7">
           <div className="font-bold md:text-3xl text-2xl cursor-pointer flex items-center text-white">
@@ -48,14 +52,14 @@ export function Navbar() {
               onMouseLeave={() => setProductDropdown(false)} // Hide dropdown
             >
               <Link
-                to="/products"
+                to=""
                 className="relative text-white hover:cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-500 hover:after:w-full"
               >
                 PRODUCTS
               </Link>
               {/* Dropdown menu */}
               {productDropdown && (
-                <ul className="absolute left-0 bg-black text-white w-[50] py-2 mt-1 rounded-lg shadow-lg">
+                <ul className="absolute left-0 bg-black text-white w-[50] py-2  rounded-lg shadow-lg">
                   <li>
                     <Link to="/windows" className="block px-4 py-2 hover:bg-gray-600">
                       Windows
@@ -67,18 +71,24 @@ export function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/accessories" className="block px-4 py-2 hover:bg-gray-600">
-                      Accessories
+                    <Link to="/handles" className="block px-4 py-2 hover:bg-gray-600">
+                      Handles
                     </Link>
                   </li>
+                 
                 </ul>
               )}
             </li>
 
-            <Button>Request a Quote</Button>
+            {/* <Button  onClick={() => setIsOpen(true)}>Request a Quote</Button> */}
+            <button onClick={() => setIsOpen(true)}  className="py-3 px-6 rounded md:ml-8 cursor-pointer bg-yellow-600 hover:bg-yellow-400 duration-500">Request a Quote</button>
           </ul>
         </div>
       </div>
     </div>
   );
 }
+
+Navbar.propTypes = {
+  setIsOpen: PropTypes.func.isRequired, // Ensure setIsOpen is passed correctly
+};

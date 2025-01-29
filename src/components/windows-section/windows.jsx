@@ -72,14 +72,14 @@ const windowsData = [
 
 export function Windows() {
     return (
-        <div className="pt-24 md:px-20 px-7">
+        <div className="pt-24 md:px-20 pb-16 px-7">
             <div className="flex flex-col text-black font-semibold justify-center items-center ">
                 <h1 className="md:text-6xl text-3xl mb-4 md:px-48 text-center">Explore Our Premium Windows</h1>
                 <p className="font-semibold text-black text-xl">Home / Windows</p>
             </div>
             {windowsData.map((category, index) => (
                 <div key={index} className="pt-16">
-                    <h2 className="md:text-4xl text-3xl md:text-start text-center font-bold text-gray-800 mb-8">{category.category}</h2>
+                    <h2 className="md:text-4xl text-3xl md:text-start text-center font-bold text-black mb-8">{category.category}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {category.products.map((product, idx) => (
                             <div
@@ -92,7 +92,7 @@ export function Windows() {
                                     className="w-full h-48 object-cover rounded-t-2xl transform transition-transform duration-300 hover:scale-110"
                                 />
                                 <p className="text-gray-600 font-semibold mt-4">{product.description}</p>
-                                <h3 className="md:text-2xl text-xl font-bold text-gray-800 mt-4">
+                                <h3 className="md:text-2xl text-xl font-bold text-black mt-4">
                                     {product.heading}
                                 </h3>
                                 <p className="text-gray-600 font-semibold mt-2">{product.details}</p>

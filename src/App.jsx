@@ -9,34 +9,55 @@ import { Doors } from "./components/doors/doors";
 import { About } from "./components/about/about";
 import { AboutUs } from "./components/about/about-us";
 import { ServiceDetails } from "./components/services/service-details";
+import { Footer } from "./components/footer/footer";
+import { Handles } from "./components/handles/handles";
+
+import { useEffect, useState } from "react";
+import ContactModal from "./components/contact-section/contact-model";
 
 function AppContent() {
   const location = useLocation();
-
-  // List of paths where HeroSection and About should NOT be shown
-  const excludePaths = ["/services", "/windows", "/doors", "/contact", "/about-us"];
+  const excludePaths = ["/services", "/windows", "/doors", "/contact", "/about-us", "/handles"];
   const showDefaultContent = !excludePaths.includes(location.pathname);
+  const [isOpen, setIsOpen] = useState(false);
+  console.log(isOpen);
+
+  useEffect(() => {
+    console.log("isOpen state changed:", isOpen);
+}, [isOpen]);  
 
   return (
     <>
-      <Navbar />
-      {showDefaultContent && (
-        <>
-          <HeroSection />
-          <About />
-          <Services/>
-        </>
-      )}
-      <Routes>
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/services" element={<ServiceDetails />} />
-        <Route path="/windows" element={<Windows />} />
-        <Route path="/doors" element={<Doors />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+
+      <Navbar setIsOpen={setIsOpen} /> {/* ✅ Pass setIsOpen as a prop */}
+      <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} /> {/* ✅ Pass to Modal */}
+
+
+      <div className="main-content">
+        {showDefaultContent && (
+          <>
+            <HeroSection />
+            <About />
+            <Services />
+          </>
+        )}
+
+        <Routes>
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/services" element={<ServiceDetails />} />
+          <Route path="/windows" element={<Windows />} />
+          <Route path="/doors" element={<Doors />} />
+          <Route path="/handles" element={<Handles />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
+
+
     </>
   );
 }
+
 
 function App() {
   return (

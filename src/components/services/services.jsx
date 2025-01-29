@@ -64,7 +64,7 @@ export function Services() {
                             <img
                                 src={service.image}
                                 alt={service.heading}
-                                className="w-full h-48 object-cover rounded-t-2xl transform transition-transform duration-300 hover:scale-110"
+                                className="w-full h-48 object-cover cursor-pointer rounded-t-2xl transform transition-transform duration-300 hover:scale-110"
                             />
                         </button>
 
