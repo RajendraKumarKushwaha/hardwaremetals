@@ -8,7 +8,7 @@ export function Footer() {
         { name: "CONTACT US", link: "/contact" },
     ];
     return (
-        <footer className="bg-[#181818] text-[#e1e1e1] py-10">
+        <footer className="bg-[#181818] text-[#e1e1e1] py-10 ">
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
                 <div>
                     <h3 className="text-2xl  font-bold mb-4">About Us</h3>
@@ -48,7 +48,7 @@ export function Footer() {
                 </div>
             </div>
             <hr className="border-1 border-gray-600 mt-4 "/>
-            <div className="text-center mt-4 leading-7">
+            <div className="text-center mt-4 leading-7 md:px-20  px-7">
                "© 2025 "
                <span>URMILA METALS</span>
                " | All Rights Reserved. | Designed & Developed with passion by " &nbsp;
