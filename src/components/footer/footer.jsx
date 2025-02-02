@@ -47,8 +47,8 @@ export function Footer() {
                     </div>
                 </div>
             </div>
-            <hr className="border-1 border-gray-600 "/>
-            <div className="text-center pt-4 leading-7">
+            <hr className="border-1 border-gray-600 mt-4 "/>
+            <div className="text-center mt-4 leading-7">
                "© 2025 "
                <span>URMILA METALS</span>
                " | All Rights Reserved. | Designed & Developed with passion by " &nbsp;
