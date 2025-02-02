@@ -22,9 +22,9 @@ export function Navbar({ setIsOpen }) {
       <div className="shadow-md fixed top-0 h-20 w-full bg-black z-50 left-0">
         <div className="md:flex justify-between items-center  py-4 md:px-20 px-7">
           <div className="font-bold md:text-3xl text-2xl cursor-pointer flex items-center text-white">
-            <span className="bi bi-person text-3xl text-white mr-1 pt-2"></span>
-            <h1 className="uppercase">urmila metals</h1>
-            {/* <img src="/img/metal-logo3.webp"  alt="" className="w-15"/> */}
+            {/* <span className="bi bi-person text-3xl text-white mr-1 pt-2"></span> */}
+            {/* <h1 className="uppercase">urmila metals</h1> */}
+            <img src="/img/logo-4.png"  alt="" className="w-15 h-15"/>
           </div>
           <div onClick={() => setOpen(!open)} className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden">
             <span className={open ? "bi bi-x-lg text-white" : "bi bi-list text-white"}></span>

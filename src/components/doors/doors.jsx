@@ -73,9 +73,9 @@ const doorsData = [
 export function Doors() {
     return (
         <div className="pt-24 md:px-20 px-7 pb-16">
-            <div className="flex flex-col text-black font-semibold justify-center items-center">
+            <div className="flex flex-col text-[#181818]  justify-center items-center">
                 <h1 className="md:text-6xl text-3xl mb-4 md:px-48 text-center">Explore Our Premium Doors</h1>
-                <p className="font-semibold text-black text-xl">Home / Doors</p>
+                <p className=" text-[#181818] text-xl">Home / Doors</p>
             </div>
             {doorsData.map((category, index) => (
                 <div key={index} className="pt-16">
@@ -91,11 +91,11 @@ export function Doors() {
                                     alt={product.heading}
                                     className="w-full h-48 object-cover rounded-t-2xl transform transition-transform duration-300 hover:scale-110"
                                 />
-                                <p className="text-gray-600 font-semibold mt-4">{product.description}</p>
-                                <h3 className="md:text-2xl text-xl font-bold text-black mt-4">
+                                <p className="text-[#83827f]  mt-4">{product.description}</p>
+                                <h3 className="md:text-2xl text-xl font-bold text-[#181818] mt-4">
                                     {product.heading}
                                 </h3>
-                                <p className="text-gray-600 font-semibold mt-2">{product.details}</p>
+                                <p className="text-[#83827f]  mt-2">{product.details}</p>
                             </div>
                         ))}
                     </div>

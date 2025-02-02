@@ -52,8 +52,7 @@ export default function ContactModal({ isOpen, setIsOpen }) {
   );
 }
 
-// ✅ Define prop types
 ContactModal.propTypes = {
-  isOpen: PropTypes.bool.isRequired, // `isOpen` must be a boolean
-  setIsOpen: PropTypes.func.isRequired, // `setIsOpen` must be a function
+  isOpen: PropTypes.bool.isRequired, 
+  setIsOpen: PropTypes.func.isRequired, 
 };

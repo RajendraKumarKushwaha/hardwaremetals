@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import './services.css';
-import { Footer } from "../footer/footer";
 const servicesData = [
     {
         image: "/img/doors.jpg",
@@ -62,9 +61,9 @@ export function ServiceDetails() {
     return (
         <div className="flex flex-col min-h-screen py-16"> {/* Flexbox and min-height to ensure proper layout */}
             <div className="bg-[url('/img/bg-white.jpg')] h-auto md:px-20 px-7 bg-cover bg-center bg-no-repeat w-full">
-                <div className="flex flex-col text-black font-bold justify-center items-center pt-15 ">
+                <div className="flex flex-col text-[#181818] font-bold justify-center items-center pt-15 ">
                     <h1 className="md:text-6xl text-3xl mb-4 md:px-48 text-center">Our Best Services</h1>
-                    <p className="font-semibold text-black text-[17px] text-center">
+                    <p className=" text-[#181818] text-[17px] text-center">
                         Delivering top-notch solutions with precision and care, tailored to meet all your needs.
                     </p>
                 </div>
@@ -94,9 +93,9 @@ export function ServiceDetails() {
                                     />
                                 </button>
 
-                                <p className="text-gray-600 font-semibold mt-4">{service.description}</p>
-                                <h3 className="md:text-2xl text-xl font-bold text-gray-800 mt-4">{service.heading}</h3>
-                                <p className="text-gray-600 font-semibold text-[17px] leading-7 mt-2">{service.details}</p>
+                                <p className="text-[#83827f]  mt-4">{service.description}</p>
+                                <h3 className="md:text-2xl text-xl font-bold text-[#181818] mt-4">{service.heading}</h3>
+                                <p className="text-[#83827f]  text-[17px] leading-7 mt-2">{service.details}</p>
                             </div>
                         ))}
                     </div>
