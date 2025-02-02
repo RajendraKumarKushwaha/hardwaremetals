@@ -90,6 +90,7 @@ export function ServiceDetails() {
                                         src={service.image}
                                         alt={service.heading}
                                         className="w-full h-48 object-cover rounded-t-2xl transform transition-transform duration-300 hover:scale-110"
+                                        loading="lazy"
                                     />
                                 </button>
 

@@ -70,6 +70,7 @@ export function Handles() {
                                     src={product.image}
                                     alt={product.heading}
                                     className="w-full h-48 object-cover rounded-t-2xl transform transition-transform duration-300 hover:scale-110"
+                                    loading="lazy"
                                 />
                                 <p className="text-[#83827f]  mt-4">{product.description}</p>
                                 <h3 className="md:text-2xl text-xl font-bold text-[#181818] mt-4">
