@@ -8,7 +8,7 @@ export function Footer() {
         { name: "CONTACT US", link: "/contact" },
     ];
     return (
-        <footer className="bg-[#181818] text-[#e1e1e1] py-10 ">
+        <footer className="bg-[#181818] text-[#e1e1e1] pt-10 pb-5 ">
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
                 <div>
                     <h3 className="text-2xl  font-bold mb-4">About Us</h3>
