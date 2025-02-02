@@ -38,10 +38,10 @@ export function Services() {
     };
 
     return (
-        <div className="pt-24 md:px-20 pb-16 px-7">
+        <div className=" md:px-20 pb-16 px-7">
             <div className="flex flex-col text-[#181818] font-bold justify-center items-center ">
-                <h1 className="md:text-6xl text-3xl mb-4 md:px-48 text-center">Product and Services</h1>
-                <p className=" text-[#181818] text-xl">Home / Service</p>
+                <h1 className="md:text-6xl text-3xl  md:px-48 text-center">Product and Services</h1>
+               
             </div>
 
             {/* Spinner Loader */}
@@ -51,7 +51,7 @@ export function Services() {
                 </div>
             )}
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-13">
                 {servicesData.map((service, index) => (
                     <div
                         key={index}

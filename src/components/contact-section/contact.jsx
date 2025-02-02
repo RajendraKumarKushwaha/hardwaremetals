@@ -1,7 +1,7 @@
 export function Contact() {
     return (
-        <div className="flex flex-col min-h-screen  py-16"> {/* Add flex and min-height to keep the footer at the bottom */}
-            <div className="bg-[url('/img/bg-white.jpg')] h-auto md:px-20 px-7 bg-cover bg-center bg-no-repeat w-full">
+        <div className="flex flex-col min-h-screen  "> {/* Add flex and min-height to keep the footer at the bottom */}
+            <div className="bg-[url('/img/bg-white.jpg')] py-16 h-auto md:px-20 px-7 bg-cover bg-center bg-no-repeat w-full">
                 <div className="flex flex-col text-[#181818] font-bold justify-center items-center pt-15">
                     <h1 className="md:text-6xl text-3xl mb-4 md:px-48 text-center">Contact Us.</h1>
                     <p className=" text-[#181818] text-[17px] text-center">
@@ -9,7 +9,7 @@ export function Contact() {
                     </p>
                 </div>
                 <div className="md:mt-20 mt-10">
-                    <div className="md:flex pt-8 justify-between space-y-6">
+                    <div className="md:flex pt-8 justify-between  space-y-6">
                         {/* Left Contact Info Section */}
                         <div className="md:w-[48%] w-full">
                             <h1 className="md:text-6xl text-3xl text-black font-bold mb-4 ">We’d Love to Hear From You</h1>
@@ -43,7 +43,7 @@ export function Contact() {
 
                         {/* Right Contact Form Section */}
                         <div className="md:w-[48%] w-full">
-                            <form className="bg-white p-6 border-1 rounded-lg shadow-lg w-full max-w-md">
+                            <form className="bg-white p-6 border-1 rounded-lg shadow-lg w-full ">
                                 <h2 className="text-2xl font-bold text-[#181818] mb-4">Get in Touch</h2>
                                 <p className="mb-4 text-[#83827f]  text-[17px]">
                                     Please feel free to get in touch with us using the contact form below. We’d love to hear from you.

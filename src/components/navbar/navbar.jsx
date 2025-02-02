@@ -19,7 +19,7 @@ export function Navbar({ setIsOpen }) {
   return (
     <div>
       
-      <div className="shadow-md fixed top-0 h-20 w-full bg-black z-50 left-0">
+      <div className="shadow-md fixed  top-0 h-22 w-full bg-black z-50 left-0">
         <div className="md:flex justify-between items-center  py-4 md:px-20 px-7">
           <div className="font-bold md:text-3xl text-2xl cursor-pointer flex items-center text-white">
             {/* <span className="bi bi-person text-3xl text-white mr-1 pt-2"></span> */}

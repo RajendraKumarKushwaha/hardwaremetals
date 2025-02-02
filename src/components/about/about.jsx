@@ -1,15 +1,15 @@
 export function About() {
     return (
-        <div className="pt-24 md:px-20 px-7">
-            <div className="flex flex-col text-[#181818] font-bold justify-center items-center ">
-                <h1 className="md:text-6xl text-3xl mb-4 md:px-48  text-center">About Us</h1>
-                <p className=" text-[#181818] text-xl">Home / About Us</p>
+        <div className="py-13 md:px-20 px-7">
+            <div className="flex flex-col text-[#181818] font-bold justify-center  ">
+                <h1 className="md:text-6xl text-3xl  md:px-48  text-center">About Us</h1>
+               
             </div>
-            <div className="md:flex pt-8 justify-between  space-y-6">
+            <div className="md:flex py-13 justify-between  ">
                 <div className="md:w-[48%] w-full">
-                    <h1 className="md:text-[50px] text-3xl mb-7 font-bold md:text-start text-center text-[#181818]">The main values ​​of the company</h1>
-                    <p className="text-[#83827f] text-[17px] leading-7 ">As technology and innovation continue to advance, windows and  doors have evolved beyond their traditional roles.</p>
-                    <p className="text-[#83827f] text-[17px] leading-7   mt-8"> Energy-efficient designs, smart home integration, and sustainable materials have become essential considerations in
+                    <h1 className="md:text-[50px] text-3xl pb-5  font-bold md:text-start text-center  text-[#181818]">The main values ​​of the company</h1>
+                    <p className="text-[#83827f] text-[17px] pb-5 leading-7 ">As technology and innovation continue to advance, windows and  doors have evolved beyond their traditional roles.</p>
+                    <p className="text-[#83827f] text-[17px] leading-7 pb-5 "> Energy-efficient designs, smart home integration, and sustainable materials have become essential considerations in
                         the selection process. Homeowners and builders alike are increasingly seeking solutions that not only enhance the visual appeal of their spaces but also contribute to energy conservation and environmental
                     </p>
                 </div>

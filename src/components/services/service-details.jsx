@@ -59,8 +59,8 @@ export function ServiceDetails() {
     };
 
     return (
-        <div className="flex flex-col min-h-screen py-16"> {/* Flexbox and min-height to ensure proper layout */}
-            <div className="bg-[url('/img/bg-white.jpg')] h-auto md:px-20 px-7 bg-cover bg-center bg-no-repeat w-full">
+        <div className="flex flex-col min-h-screen "> {/* Flexbox and min-height to ensure proper layout */}
+            <div className="bg-[url('/img/bg-white.jpg')] py-16 h-auto md:px-20 px-7 bg-cover bg-center bg-no-repeat w-full">
                 <div className="flex flex-col text-[#181818] font-bold justify-center items-center pt-15 ">
                     <h1 className="md:text-6xl text-3xl mb-4 md:px-48 text-center">Our Best Services</h1>
                     <p className=" text-[#181818] text-[17px] text-center">
