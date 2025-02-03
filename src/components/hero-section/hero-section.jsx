@@ -16,20 +16,31 @@ export function HeroSection() {
                 <div>
                     <div className="  md:text-xl">
                         <p>
-                            Our windows and doors combine durability  
-                            <span className="hidden sm:inline"><br /></span>  
-                            with advanced insulation to keep your  
-                            <span className="hidden sm:inline"><br /></span>  
+                            Our windows and doors combine durability
+                            <span className="hidden sm:inline"><br /></span>
+                            with advanced insulation to keep your
+                            <span className="hidden sm:inline"><br /></span>
                             home secure and energy-efficient.
                         </p>
                     </div>
                     <div className="font-semibold mt-3">
-                        <button className="py-3 px-6 rounded me-1 md:mb-0 mb-2 cursor-pointer duration-500 bg-cyan-900 hover:bg-white hover:text-black">
-                            <Link to="/windows">View all Windows</Link>
-                        </button>
-                        <button className="py-3 px-6 rounded md:ml-8 cursor-pointer duration-500 bg-transparent outline-2 hover:bg-white hover:text-black">
-                            <Link to="/doors">View all Doors</Link>
-                        </button>
+                        <Link to="/windows" aria-label="View all Windows">
+                            <button
+                                type="button"
+                                className="py-3 px-6 rounded me-1 md:mb-0 mb-2 cursor-pointer duration-500 bg-cyan-900 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
+                            >
+                                View all Windows
+                            </button>
+                        </Link>
+
+                        <Link to="/doors" aria-label="View all Windows">
+                            <button 
+                            type="button"
+                            className="py-3 px-6 rounded md:ml-8 cursor-pointer duration-500 bg-transparent outline-2 hover:bg-white hover:text-black"
+                           >
+                            View all Doors
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
