@@ -13,7 +13,8 @@ import { Footer } from "./components/footer/footer";
 import { Handles } from "./components/handles/handles";
 
 import { useEffect, useState } from "react";
-import ContactModal from "./components/contact-section/contact-model";
+import { ChatButton } from "./components/chat-section/chat-button";
+//import {ContactModal} from "./components/contact-section/contact-model";
 
 function AppContent() {
   const location = useLocation();
@@ -30,7 +31,10 @@ function AppContent() {
     <>
 
       <Navbar setIsOpen={setIsOpen} /> {/* ✅ Pass setIsOpen as a prop */}
-      <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} /> {/* ✅ Pass to Modal */}
+      <ChatButton/>
+     
+      {/* <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} /> ✅ Pass to Modal */}
+      
 
 
       <div className="main-content">
@@ -50,6 +54,7 @@ function AppContent() {
           <Route path="/handles" element={<Handles />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+       
         <Footer />
       </div>
 
