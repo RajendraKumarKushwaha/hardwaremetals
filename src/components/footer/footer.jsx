@@ -51,8 +51,8 @@ export function Footer() {
             <div className="text-center text-[#b9b9b9]  mt-4 leading-7 md:px-20  px-7">
                "© 2025 "
                <span>URMILA METALS</span>
-               " | All Rights Reserved. | Designed & Developed with passion by " &nbsp;
-               <a href="https://www.rajendrakushwaha.com/" target="_blank" className="underline">Rajendra</a>
+               " | All Rights Reserved. | Designed & Developed by " &nbsp;
+               <a href="https://www.techyardweb.com/" target="_blank" className="underline">Techyard Web Solutions</a>
             </div>
            
         </footer>

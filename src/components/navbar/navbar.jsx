@@ -81,15 +81,16 @@ export function Navbar({ setIsOpen }) {
 
             {/* <Button  onClick={() => setIsOpen(true)}>Request a Quote</Button> */}
             {/* <button onClick={() => setIsOpen(true)}  className="py-3 px-6 rounded md:ml-8 cursor-pointer bg-yellow-600 hover:bg-yellow-400 duration-500">Request a Quote</button> */}
-            <button
-              type="button"
-              // onClick={() => setIsOpen(true)}
-              className="py-3 px-6 rounded md:ml-8 cursor-pointer bg-yellow-600 hover:bg-yellow-500 duration-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
-              aria-label="Request a quote"
-            >
-              Request a Quote
-            </button>
-
+            <Link to="/contact">
+              <button
+                type="button"
+                // onClick={() => setIsOpen(true)}
+                className="py-3 px-6 rounded md:ml-8 cursor-pointer bg-yellow-600 hover:bg-yellow-500 duration-500 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
+                aria-label="Request a quote"
+              >
+                Request a Quote
+              </button>
+            </Link>
           </ul>
         </div>
       </div>
